@@ -22,7 +22,14 @@ namespace PrimeiroApp.Controllers
         {
             return View();
         }
-
+       
+        [HttpPost]
+        public IActionResult DetalhesUsuario(Usuario usuario)
+        {
+            _usuarioRepository.Atualizar(usuario);
+            return RedirectToAction(nameof(Index));
+        }
+    
         [HttpPost]
         public IActionResult Cadastrar(Usuario usuario)
         {
