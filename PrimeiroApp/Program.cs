@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
